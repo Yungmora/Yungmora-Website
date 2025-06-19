@@ -1,0 +1,232 @@
+index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <form id="booking-form">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yung Mora — Music Producer & Beatmaker</title>
+  <style>
+    body {
+      transition: opacity 0.6s ease-in-out;
+    }
+    body.fade-out {
+      opacity: 0;
+    }
+  </style>
+  
+  <script>
+    // Page transition effect
+    document.addEventListener("DOMContentLoaded", function() {
+      document.body.classList.remove("fade-out");
+    });
+  
+    window.addEventListener("beforeunload", function () {
+      document.body.classList.add("fade-out");
+    });
+  
+    // Email form handler using FormSubmit
+    document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById("booking-form");
+      form.setAttribute("action", "https://formsubmit.co/chikeziesamuelchikezie@gmail.com"); // Your email
+      form.setAttribute("method", "POST");
+  
+      form.innerHTML += '<input type="hidden" name="_captcha" value="false">';
+      form.innerHTML += '<input type="hidden" name="_template" value="table">';
+      form.innerHTML += '<input type="hidden" name="_autoresponse" value="Thanks for reaching out to Yung Mora! I’ll get back to you soon.">';
+    });
+  </script>
+  
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a6b4b2d1b8.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>🎧 Yung Mora</h1>
+  <header>
+    <img src="assets/yungmora-logo.png" alt="Yung Mora Logo" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#music">Music</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+</header>
+
+<section id="hero">
+  <h1>Welcome to Yung Mora’s World of Sound 🎶</h1>
+  <p>
+    Dive into a hub where music meets soul. Stream exclusive beats, discover Afro vibes, book sessions, and connect directly with Lagos' finest — Yung Mora.
+  </p>
+</section>
+
+<section id="music">
+  <h2><i class="fas fa-headphones icon"></i> Stream Music on My Site</h2>
+  <div class="embed-links">
+    <!-- Spotify -->
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/7MsTBCnYP2sz7rwhdXo5sL" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+    <!-- YouTube -->
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed?listType=user_uploads&list=UCNLwUNr5G5c8huFb0osLQWw" title="Yung Mora YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <!-- Apple Music -->
+    <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="180" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ng/artist/yungmora/"> </iframe>
+
+    <!-- Amazon Music -->
+    <a href="https://music.amazon.com/artists/B0BFLF7FW6/yungmora" target="_blank" class="btn"><i class="fab fa-amazon icon"></i> Listen on Amazon Music</a>
+
+    <!-- Deezer -->
+    <iframe title="Deezer Widget" src="https://widget.deezer.com/widget/dark/artist/176135277" width="100%" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+
+    <!-- BeatStars -->
+    <iframe src="https://www.beatstars.com/embed/beat-player?storeId=122527" width="100%" height="250" scrolling="no" frameborder="0"></iframe>
+
+    <!-- Gumroad -->
+    <a href="https://yungmora.gumroad.com/" target="_blank" class="btn"><i class="fas fa-shopping-cart icon"></i> Buy Beats on Gumroad</a>
+  </div>
+
+  <div id="music-bar">
+    <span><i class="fas fa-play-circle"></i> Now Streaming: Featured Instrumental</span>
+    <audio controls autoplay>
+      <source src="/music/featured-instrumental.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+</section>
+
+<section id="booking" class="booking-section">
+  <h2><i class="fas fa-calendar-check"></i> Book a Session with Yung Mora</h2>
+  <p>Choose your service and let's cook magic 🎶</p>
+
+  <form id="booking-form">
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="service">Select a Service*</label>
+    <select id="service" name="service" required>
+      <option value="">-- Choose a Service --</option>
+      <option>Recording Session</option>
+      <option>Beat Making (Any Genre)</option>
+      <option>Mixing & Mastering</option>
+      <option>Music Business Consultation</option>
+    </select>
+
+    <label for="message">Tell Me More (Optional)</label>
+    <textarea id="message" name="message" rows="4" placeholder="What are you looking to achieve?"></textarea>
+
+    <button type="submit" class="btn">Submit Booking Request</button>
+  </form>
+</section>
+
+<section id="portfolio">
+  <h2><i class="fas fa-briefcase icon"></i> Portfolio & Experience</h2>
+  <p>I did my Industrial Training (IT) at Radio Lagos in 2021, where I worked in the automation room and helped manage content updates. Check out more of my professional credits and collaborations below:</p>
+  <ul>
+    <li>Produced "Trees" by Toonzy & Lavish</li>
+    <li>Produced the "Bad Habit" EP (2023)</li>
+    <li>Sound engineer for Triumph Edu Radio (2020–2021)</li>
+    <li>Produced "My Life" by Chaps (2025)</li>
+    <li>Collaborations with Lexx the Wolf, Oba Ara, Boy Play, Klawud, Wheezylab, Y3B, and more</li>
+  </ul>
+</section>
+
+<footer>
+  <p>&copy; 2025 Yung Mora. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+
+
+<style>
+body {
+  font-family: 'Urbanist', 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  color: #111;
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+header, footer {
+  background-color: #000;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+.btn {
+  background: #1db954;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #14833b;
+}
+section {
+  padding: 2rem;
+}
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 1rem;
+}
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Urbanist', sans-serif;
+}
+#hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #111, #222);
+  color: white;
+}
+#music-bar {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 8px;
+}
+.embed-links iframe, .embed-links a.btn {
+  margin-bottom: 1.5rem;
+  display: block;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111;
+    color: #eee;
+  }
+  section {
+    background: #222;
+  }
+  h2 {
+    color: #fff;
+  }
+}
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+</style>
