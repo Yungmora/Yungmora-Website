@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 
+import logo from "../assets/logo.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -10,7 +12,7 @@ const Navbar = () => {
       <div className="logo">
         <Link to="/">
           <img 
-            src="/images/logo.png"
+            src={logo}
             alt="YungMora Logo" 
             style={{ 
               height: '55px', 

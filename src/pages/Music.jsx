@@ -1,3 +1,5 @@
+import artwork from "../assets/afrobeat-cover.jpg";
+import beat from "../assets/vibe-mosaic.mp3";
 const Music = () => {
   return (
     <div>
@@ -44,7 +46,7 @@ const Music = () => {
           <div className="beat-card">
             
             <img 
-              src="/images/Afrobeat3000x3000.jpg" 
+              src={artwork} 
               alt="Vibe Mosaic" 
               style={{ 
                 width: '300px', 
@@ -59,13 +61,21 @@ const Music = () => {
               <p>Instrumental • Afrobeat</p>
               
               <audio controls style={{ width: '100%', margin: '15px 0' }}>
-                <source src="/Sound/Vibe __Mosiac_-_Instrumental.mp3" type="audio/mpeg" />
+                <source src={beat} type="audio/mpeg" />
                 Your browser does not support the audio element.
               </audio>
 
-              <button className="btn primary" style={{width: "100%"}}>
-                Buy This Beat - ₦15,000
-              </button>
+             <button
+  className="btn primary"
+  onClick={() =>
+    window.open(
+      "https://wa.me/2349052297452?text=I want to buy Vibe Mosaic beat",
+      "_blank"
+    )
+  }
+>
+  Buy This Beat - ₦15,000
+</button>
             </div>
           </div>
         </div>
